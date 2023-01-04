@@ -8,20 +8,6 @@ import CompetitionsMDB from '../interfaces/CompetitionsMDB'
 
 @injectable()
 
-/*
-  records = {data: [{id: "123",
-                             name: "CompetitionExample",
-                             date: "1/1/23",
-                             time: "4:30",
-                             numberOfParticipants: 5,
-                             },
-                             {id: "1234",
-                              name: "CompetitionExample2",
-                              date: "2/1/23",
-                              time: "5:30",
-                              numberOfParticipants: 10,
-                              }]}
-*/
 class CompetitionsService implements ICompetitionsService {
   
                

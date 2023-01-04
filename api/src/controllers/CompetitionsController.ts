@@ -8,8 +8,6 @@ import ICompetitionsFacade from '../interfaces/ICompetitionsFacade'
 import { request } from 'http'
 import ICompetitions from '../interfaces/ICompetitions'
 
- 
-
 @injectable()
 class CompetitionsController implements IController {
   public path = '/competitions'
@@ -25,16 +23,12 @@ class CompetitionsController implements IController {
   private initRoutes() {
     this.router.use('/competitions/', noCache())
     this.router.get('/competitions/search', this.getFutureCompetitions)
-    console.log('hello 1')
   }
 
   getFutureCompetitions =  async (request: Request, response: Response) => {
-    console.log('hello 22')
     response.setHeader('key1', 'value1')
     const status = await this.competitionsService.connectToDatabase()
     const data: ICompetitions[] = await this.competitionsService.getFutureCompetitions()
-    
-    console.log(data)
     response.send(data);
   }
 }

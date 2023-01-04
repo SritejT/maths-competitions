@@ -16,8 +16,6 @@ const CompetitionTable = () => {
       <button onClick={() => dispatch(getFutureCompetitions())}>
       </button>
 
-      {console.log(JSON.stringify(data))}
-
       <table>
         {data.map((record, index) =>
         <CompetitionEntry
